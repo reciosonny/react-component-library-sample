@@ -1,11 +1,12 @@
-import React from "react";
+import React, { SyntheticEvent } from "react";
 
 export interface ButtonProps {
-    label: string;
+    children: any;
+    onClick: (e: SyntheticEvent) => {};
 }
 
 const Button = (props: ButtonProps) => {
-    return <button>{props.label}</button>;
+    return <button onClick={props.onClick}>{props.children}</button>;
 };
 
 export default Button;
